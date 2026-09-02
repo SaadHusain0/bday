@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>A Birthday Surprise 💗 for my Zarnain</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Pacifico&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Animated background -->
+    <div id="heartBackground"></div>
+    <div id="confetti"></div>
+
+    <!-- Music -->
+    <audio id="bgMusic" loop>
+        <source src="assets/music2.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music control -->
+    <button
+        id="musicButton"
+        class="music-button"
+        aria-label="Play or pause music"
+    >
+        🎵
+    </button>
+
+    <!-- =====================
+         INTRO PAGE
+    ====================== -->
+
+    <section id="introPage" class="page active">
+
+        <div class="intro-content">
+
+            <div class="sparkles">✦Good Morning!✦</div>
+
+            <p class="eyebrow">
+                Hey you (˶˃ᆺ˂˶)
+            </p>
+
+            <h1 class="intro-name">
+                Pookie 💗
+            </h1>
+
+            <img
+                class="intro-heart"
+                src="assets/cat.jpg"
+                alt="cute cat"
+            >
+
+            <p class="intro-text">
+                Today is not an ordinary day...
+            </p>
+
+            <h2 class="birthday-reveal">
+                IT'S MY ZAINU'S BIRTHDAY! 😊🎂🎉
+            </h2>
+
+            <button
+                class="main-button"
+                onclick="startSurprise()"
+            >
+                Open your surprise 🎁
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================
+         ENVELOPE PAGE
+    ====================== -->
+
+    <section id="envelopePage" class="page">
+
+        <div class="envelope-section">
+
+            <p class="eyebrow">
+                A special delivery for my Cutie Pie 💌
+            </p>
+
+            <h1 class="page-title">
+                Tap the envelope 
+            </h1>
+
+
+            <div
+                id="envelopeWrapper"
+                class="envelope-wrapper"
+                onclick="openEnvelope()"
+            >
+
+                <!-- LETTER -->
+
+                <div class="letter">
+
+                    <div class="letter-content">
+
+                        <p class="letter-small">
+                            For my birhday girl...
+                        </p>
+
+                        <h2>
+                            Happy Birthday, Zarnain!😘
+                        </h2>
+
+                        <div class="letter-line">
+                            ♥ ♥ ♥
+                        </div>
+
+                        <p>
+                            Yawm-e-wiladat mubarak ho...
+                            Allah ta'ala Nabi-e-Akram (S.A.W.) ke sadke tumhaari zindagi ko be-shumaar
+                            khushiyon se bhar de aur tumhe is saal be-shumaar
+                            nematon se nawaze.        
+                        </p>
+
+                        <p>
+                            Allah ta'ala Hazrat-e-Ali (R.A.) ke sadqe 
+                            aane waale saalon ko tumhaare liye asaan
+                            banaye.
+                        </p>
+
+                        <p>
+                            Allah ta'ala Hazrat-e-Fatima (R.A.) ke sadqe
+                            tumhe tamam balaon se aur tamam bimariyon se aur tamam
+                            hadsaat se mehfooz rakhe.
+                        </p>
+
+                        <p>
+                            Allah ta'ala tumhe seedhe raaste par chalaye
+                            aur Maslak-e-Alahazrat par qayam rakhe.
+                        </p>
+
+                        <p>
+                           Hum tumhaare kiye dua karte hai ki tum hamesha
+                           khush raho aur khushiyan failaati raho.
+                        </p>
+
+                        <p class="letter-ending">
+                            Hum tumhe ek baar aur tumhe Birthday wish karna chahenge
+                            Allah tumhaari umr me barkat de... (Amin)
+                        </p>
+
+                        <p class="letter-sign">
+                            From your, AI
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ENVELOPE -->
+
+                <div class="envelope">
+
+                    <div class="envelope-back"></div>
+
+                    <div class="envelope-left"></div>
+
+                    <div class="envelope-right"></div>
+
+                    <div class="envelope-bottom"></div>
+
+                    <div class="envelope-flap"></div>
+
+                    <div class="envelope-seal">
+                        💗
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <p id="envelopeHint" class="tap-hint">
+                Tap once to open the letter
+            </p>
+
+
+            <!-- CONTINUE BUTTON -->
+
+            <button
+                id="letterContinueButton"
+                class="main-button letter-continue"
+                onclick="showPage('funPage')"
+            >
+                Continue
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================
+         FUN PAGE
+    ====================== -->
+
+    <section id="funPage" class="page">
+
+        <div class="content-card">
+
+            <p class="eyebrow">
+                Important investigation
+            </p>
+
+            <h1 class="page-title">
+                Some facts about you
+            </h1>
+
+
+            <div class="message-card">
+
+                <h2>
+                    Fact number one
+                </h2>
+
+                <p>
+                Your nature is too kind that you forget everyone's mistakes and forgive them.
+                </p>
+
+            </div>
+
+
+            <div class="message-card">
+
+                <h2>
+                    Fact number two
+                </h2>
+
+                <p>
+                    So cute and good looking,
+                    But hard to understand you.
+                </p>
+
+            </div>
+
+
+            <div class="message-card">
+
+                <h2>
+                    Final conclusion
+                </h2>
+
+                <p>
+                    A very strange person...
+                    but a memorable one.
+                </p>
+
+            </div>
+
+
+            <button
+                class="main-button"
+                onclick="showPage('photoPage')"
+            >
+                Next Surprise for my Pookie
+            </button>
+
+        </div>
+
+    </section>
+
+<!-- =========================
+         PHOTO SLIDESHOW
+    ========================== -->
+
+    <section id="photoPage" class="page">
+
+        <div class="photo-page-content">
+
+            <p class="eyebrow">
+                A few Pookie moments 📸
+            </p>
+
+            <h1>Memory time 💗</h1>
+
+            <p>
+                Tumne apni photo di hi nahi 😢
+            </p>
+
+            <div class="slideshow">
+
+                <!-- CHANGE PHOTOS HERE -->
+
+                <div class="slide active-slide">
+                    <img
+                        src="assets/photo1.jpg"
+                        alt="Memory 1"
+                    >
+                </div>
+
+                <div class="slide">
+                    <img
+                        src="assets/photo2.jpg"
+                        alt="Memory 2"
+                    >
+                </div>
+
+                <div class="slide">
+                    <img
+                        src="assets/photo3.jpg"
+                        alt="Memory 3"
+                    >
+                </div>
+
+                <button
+                    class="slide-button previous"
+                    onclick="previousSlide()"
+                >
+                    ❮
+                </button>
+
+                <button
+                    class="slide-button next"
+                    onclick="nextSlide()"
+                >
+                    ❯
+                </button>
+
+            </div>
+
+
+            <div id="dots" class="dots"></div>
+
+            <p class="photo-caption">
+                Some moments deserve a place in the story. 💗
+            </p>
+
+
+            <button
+                class="main-button"
+                onclick="showPage('heartPage')"
+            >
+                Read something real 💌
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HEARTFELT MESSAGE
+    ========================== -->
+
+    <section id="heartPage" class="page">
+
+        <div class="heart-card">
+
+            <div class="heart-top">💌</div>
+
+            <p class="eyebrow">
+                Take your time to Read It.
+            </p>
+
+            <!-- EDIT THIS MESSAGE ANYTIME -->
+
+            <h1>Happy Birthday, Zarnain. ❤️🎂</h1>
+
+            <p>
+                Kaafi waqt ho gaya hai jab hum dono ne pehle ki tarah baat ki ho, aksar waqt aur halaat ke saath log aur unki zindagiyaan badal jaati hain… aur shayad hum dono ki bhi badal gayi. Kabhi kabhi bas un dino ki yaad aa jaati hai, aur dil kehta hai ke woh bhi kitne khoobsurat din the
+            </p>
+
+            <p>
+                Woh din jab tum apne poore din ki har chhoti badi baat humein bataya karti thi, aur hum khamoshi se tumhari baatein suna karte the. Tum roz batati thi ke aaj kya-kya hua, kis se kya baat hui, aur kis kis se jhagda ho gaya… aur pata nahi kyun, lekin tumhari woh saari baatein sunna humein bohot dilchasp lagta tha. Shayad us waqt mujhe andaza hi nahi tha ke ek din yeh baatein yaadon me tabdeel ho jaayengi
+            </p>
+
+            <p>
+                Zindagi mein achhe aur bure din aate jaate rehte hain lekin ajeeb baat yeh hai ke waqt guzar jaane ke baad yaad aksar wahi khoobsurat lamhe aate hain. Aur mere liye woh lamhe meri zindagi ke kuch sabse khoobsurat lamhon mein se ek rahenge.
+            </p>
+
+            <p>
+                Afsos bas itna hai ke waqt ko na hi peeche le ja sakte hain aur na hi un lamhon ko dobara jee sakte hain bas unhi yaadon ke saath apni zindagi guzarna padta hai aur woh yaadein mere zehen mein hamesha rahengi.
+            </p>
+
+            <p>
+                Fark nahi padta ke hamari baat kayi dino mahino ya saalon tak na ho tum hamesha meri ek achhi dost rahogi. Aur agar kabhi zindagi mein tumhe kisi ki zarurat ho baat karne ke liye ya apna dil halka karne ke liye ya kisi mashware ke liye ya bas bina kisi wajah ke kisi apne ki zarurat ho toh mujhe yaad kar lena. Main hamesha tumhari baat sunne ke liye maujood rahunga. 🤍
+            </p>
+
+            <p>
+                Aur haan ek baat batani hai ki Woh jo humne tumse kaha tha ke “Zarnain, hum tumse bohot pyaar karte hain” aur uske baad jo bhi baatein hui thi woh sab humne mazaak mein kaha tha Mere dil mein kabhi tumhare baare mein koi galat ya waisa iraada nahi tha. Hum tumhari dil se respect karte hai aur hamesha karte rahenga. Aaj bas socha ke yeh baat bata deni chahiye.
+            </p>
+
+            <p>
+                Aur agar meri kisi bhi baat, kisi alfaaz, ya kisi kaam ki wajah se kabhi tumhare dil ko takleef pahunchi ho, toh main dil se maafi chahta hoon. Ho sakta hai mazaak mein kahi hui koi baat us waqt tumhe mazaak na lagi ho aur agar aisa hua ho, toh uske liye mujhe sach mein afsos hai.
+            </p>
+
+            <p>
+                Aur ek aur baat “Sara” naam ki jo ladki thi woh bhi fake thi. Jo messages waghera the, woh sab mazaak the. Tumhe jalane ya tumhe takleef dene ka mera koi iraada nahi tha.
+            </p>
+
+            <p>
+                Aur mai un cheezon ke liye maafi maangta hun jab mai kabhi kadar tumse batameezi se pesh aa jaata tha mujhe ab un baaton ka afsos hota hai ki mujhe wo sab tumse nahi kehna chahiye tha.
+            </p>
+
+            
+            <p>
+                Aur tumhaara shukriyah ki tum meri zindagi me aai haan kuch waqt ke liye hi sahi lekin us chote se waqt ki koi bhi insaan kabhi bhi barabari nahi kar sakta hai. Tumhaare liye mere dil me hamesha jagah rahegi 
+            </p>
+            
+            <p>
+                Bas aaj tumhare birthday par itna hi kehna hai zindagi chahe hum dono ko kitna bhi door kar de, kuch log aur kuch rishte dil mein hamesha ke liye rehte hai aur tum un logon mein se ho
+            </p>
+
+            <p class="final-heart-message">
+                Happy Birthday once again, Pookie. 🎂💗
+            </p>
+
+            <button
+                class="main-button"
+                onclick="showPage('questionPage')"
+            >
+                One last question 👀
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- =====================
+         QUESTION PAGE
+    ====================== -->
+
+    <section id="questionPage" class="page">
+
+        <div class="question-card">
+
+            <p class="eyebrow">
+                Very serious question...
+            </p>
+
+            <h1 class="page-title">
+                Do you love me? 😁
+            </h1>
+
+            <p>
+                Choose carefully.
+            </p>
+
+
+            <div class="question-buttons">
+
+                <button
+                    id="yesButton"
+                    class="yes-button"
+                    onclick="yesClicked()"
+                >
+                    YES
+                </button>
+
+                <button
+                    id="noButton"
+                    class="no-button"
+                >
+                    NO
+                </button>
+
+            </div>
+
+            
+            <img
+            id="randomMeme"
+            src="assets/meme1.jpg"
+            alt="funny meme"
+            >
+
+            <p
+                id="reactionBox"
+                class="reaction-box"
+            >
+                I am watching your answer...
+            </p>
+
+
+            <div
+                id="yesResult"
+                class="yes-result"
+            >
+
+                <div class="cat">
+                    <img
+                        class="cat"
+                        src="assets/cat2.jpg"
+                        alt="funnycat"
+                </div>
+
+                <h2>
+                    Yeah... I knew that.
+                </h2>
+
+                <p>
+                    Obviously.
+                    There was never any doubt.
+                </p>
+
+
+                <button
+                    class="main-button"
+                    onclick="showPage('finalPage')"
+                >
+                    Continue 🎉
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================
+         FINAL PAGE
+    ====================== -->
+
+  
+    <section id="finalPage" class="page">
+
+        <div class="final-card">
+
+            <div class="cake">🎂</div>
+
+            <h1 class="final-title">HAPPY BIRTHDAY!</h1>
+
+            <h2 class="final-name">Pookie 💗</h2>
+
+            <p>
+                I hope you have an amazing day. Aur BTW ye website banane me poore 3-4 din lag gaye 😭 lekin haan apni pyari si "Zainu Batra" ke liye itna to kar hi sakte hai aur saare messages bhi humne khud likhe hai badi mehnat lag gayi hai yaar umeed karte hai tumhe pasand aayi hogi.
+            </p>
+
+            <p>
+                Smile, eat cake and enjoy your day! 😭🎂
+            </p>
+
+            <div class="celebration">
+                🎉 ✨ 🎂 🎁 💗 🎁 🎂 ✨ 🎉
+            </div>
+
+            <button
+                class="main-button"
+                onclick="restartWebsite()"
+            >
+                Replay the website that I made for my pookie
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
